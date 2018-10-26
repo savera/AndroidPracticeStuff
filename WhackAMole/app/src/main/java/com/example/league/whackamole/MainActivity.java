@@ -16,6 +16,8 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
+    //TO DO: end game and spread out moles more 
+
     Button startButton;
     Button mole1;
     Button mole2;
@@ -25,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
     Button mole6;
 
     TextView welcomeMessage;
+    TextView scoreDisplay;
 
     Random rand = new Random();
     int score;
-    long delay = 2000;
+    long delay = 500;
+    String scoreChar = "score: ";
 
     List<Button> moles = new ArrayList<>();
 
@@ -36,15 +40,17 @@ public class MainActivity extends AppCompatActivity {
     TimerTask task = new TimerTask() {
         @Override
         public void run() {
-            //NOT WORKING --> Crashing --> TO FIX
-            int randMole = rand.nextInt(6);
-            int left = rand.nextInt(200);
-            int top = rand.nextInt(200);
-            int right = rand.nextInt(200);
-            int bottom = rand.nextInt(200);
-            RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) moles.get(randMole).getLayoutParams();
-            p.setMargins(left, top, right, bottom);
-            moles.get(randMole).setLayoutParams(p);
+            final int randMole = rand.nextInt(6);
+            int left = rand.nextInt(600);
+            int top = rand.nextInt(800);
+            final RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) moles.get(randMole).getLayoutParams();
+            p.setMargins(left, top, 0, 0);
+            runOnUiThread(new Runnable() {
+                              @Override
+                              public void run() {
+                                  moles.get(randMole).setLayoutParams(p);
+                              }
+            });
             Log.d("running", "in run method");
         }
     };
@@ -63,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
         mole6 = findViewById(R.id.mole6);
 
         welcomeMessage = findViewById(R.id.welcome);
+        welcomeMessage.setTextSize(25);
+        scoreDisplay = findViewById(R.id.score);
+        scoreDisplay.setVisibility(View.GONE);
+        scoreDisplay.setText(scoreChar);
 
         moles.add(mole1);
         moles.add(mole2);
@@ -78,13 +88,13 @@ public class MainActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 startButton.setVisibility(View.GONE);
                 welcomeMessage.setVisibility(View.GONE);
+                scoreDisplay.setVisibility(View.VISIBLE);
                 for(Button b: moles){
                     b.setVisibility(View.VISIBLE);
                 }
-                time.schedule(task, delay);
+                time.schedule(task, delay, 1000);
             }
         });
 
@@ -92,8 +102,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                mole1.setVisibility(View.GONE);
-                score++;
+                scoreChar = "score: " + score++;
+                scoreDisplay.setText(scoreChar);
+                int left = rand.nextInt(600);
+                int top = rand.nextInt(800);
+                final RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) mole1.getLayoutParams();
+                p.setMargins(left, top, 0, 0);
+                mole1.setLayoutParams(p);
             }
         });
 
@@ -101,8 +116,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                mole2.setVisibility(View.GONE);
-                score++;
+                scoreChar = "score: " + score++;
+                scoreDisplay.setText(scoreChar);
+                int left = rand.nextInt(600);
+                int top = rand.nextInt(800);
+                final RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) mole2.getLayoutParams();
+                p.setMargins(left, top, 0, 0);
+                mole2.setLayoutParams(p);
             }
         });
 
@@ -110,8 +130,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                mole3.setVisibility(View.GONE);
-                score++;
+                scoreChar = "score: " + score++;
+                scoreDisplay.setText(scoreChar);
+                int left = rand.nextInt(600);
+                int top = rand.nextInt(800);
+                final RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) mole3.getLayoutParams();
+                p.setMargins(left, top, 0, 0);
+                mole3.setLayoutParams(p);
             }
         });
 
@@ -119,8 +144,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                mole4.setVisibility(View.GONE);
-                score++;
+                scoreChar = "score: " + score++;
+                scoreDisplay.setText(scoreChar);
+                int left = rand.nextInt(600);
+                int top = rand.nextInt(800);
+                final RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) mole4.getLayoutParams();
+                p.setMargins(left, top, 0, 0);
+                mole4.setLayoutParams(p);
             }
         });
 
@@ -128,8 +158,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                mole5.setVisibility(View.GONE);
-                score++;
+                scoreChar = "score: " + score++;
+                scoreDisplay.setText(scoreChar);
+                int left = rand.nextInt(600);
+                int top = rand.nextInt(800);
+                final RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) mole5.getLayoutParams();
+                p.setMargins(left, top, 0, 0);
+                mole5.setLayoutParams(p);
             }
         });
 
@@ -137,8 +172,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                mole6.setVisibility(View.GONE);
-                score++;
+                scoreChar = "score: " + score++;
+                scoreDisplay.setText(scoreChar);
+                int left = rand.nextInt(600);
+                int top = rand.nextInt(800);
+                final RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) mole6.getLayoutParams();
+                p.setMargins(left, top, 0, 0);
+                mole6.setLayoutParams(p);
             }
         });
 
