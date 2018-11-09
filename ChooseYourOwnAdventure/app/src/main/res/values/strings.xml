@@ -1,3 +1,64 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="chanceStatement">You are walking down the street and come across an old home. What will you do?</string>
+    <string name="option1">Go inside.</string>
+    <string name="option2">Keep walking.</string>
+
+    <string name="chanceStatement1">You walk past the NO TRESPASSING sign into the dark house and begin exploring. When you the end of the hallway you see and a door that looks brand new.</string>
+    <string name="option11">Open the door see what is behind it.</string>
+    <string name="option12">Leave, someone is obviously still here.</string>
+
+    <string name="chanceStatement2">As you keep walking past the house, you see a black cat that seems so be struggling. </string>
+    <string name="option21">You go see what is wrong.</string>
+    <string name="option22">Quickly avert your eyes and keep walking. Black cats are bad luck.</string>
+
+    <string name="chanceStatement11">You open the door and their a stairs heading down. As you look down you see a faint light.</string>
+    <string name="option111">Go down the stairs and see what is down there.</string>
+    <string name="option112">You do not want to get caught trespassing so you leave.</string>
+
+    <string name="chanceStatement12">You hurry out of the house and continue walking down the street. You hear something moving in the bush.</string>
+    <string name="option121">You use your phone flashlight to investigate.</string>
+    <string name="option122">Start running back home.</string>
+
+    <string name="chanceStatement21">As you come near the cat you notice its just playing with a dead mouse.</string>
+    <string name="option211">Go inside.</string>
+    <string name="option212">Keep walking.</string>
+
+    <string name="chanceStatement22">As you continue your walk, you notice a black car following you.</string>
+    <string name="option221">Stop and wait to see you it is. Then, yell at the to go away.</string>
+    <string name="option222">Run for your life.</string>
+
+    <string name="chanceStatement111"></string>
+    <string name="option1111"></string>
+    <string name="option1112"></string>
+
+    <string name="chanceStatement112"></string>
+    <string name="option1121"></string>
+    <string name="option1122"></string>
+
+    <string name="chanceStatement121"></string>
+    <string name="option1211"></string>
+    <string name="option1212"></string>
+
+    <string name="chanceStatement122"></string>
+    <string name="option1221"></string>
+    <string name="option1222"></string>
+
+    <string name="chanceStatement211"></string>
+    <string name="option2111"></string>
+    <string name="option2112"></string>
+
+    <string name="chanceStatement212"></string>
+    <string name="option2121"></string>
+    <string name="option2122"></string>
+
+    <string name="chanceStatement222"></string>
+    <string name="option2221"></string>
+    <string name="option2222"></string>
+
+    <string name="chanceStatement221"></string>
+    <string name="option2211"></string>
+    <string name="option2212"></string>
+
 </resources>
